@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+Real Recipes
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Real Recipes is a React Native mobile app (built with Expo) created as my final university project. The goal of the app is to make cooking easier by helping users discover recipes they can cook with ingredients they already have at home.
 
-## Get started
+What it Does
 
-1. Install dependencies
+Search recipes from the Edamam API
 
-   ```bash
-   npm install
-   ```
+Add ingredients to a pantry and use them to guide recipe choices
 
-2. Start the app
+Save favourite recipes for quick access
 
-   ```bash
-   npx expo start
-   ```
+See recommended/popular recipes on the home screen
 
-In the output, you'll find options to open the app in a
+Simple, themed interface with a floating bottom navigation bar
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Tools & Tech Used
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+React Native + Expo for development
 
-## Get a fresh project
+expo-router for tab navigation
 
-When you're ready, run:
+Ionicons for icons
 
-```bash
-npm run reset-project
-```
+Edamam Recipe API for recipe data
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Designed in Figma and iterated with user feedback
 
-## Learn more
+How to Run It
 
-To learn more about developing your project with Expo, look at the following resources:
+Clone this project:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+git clone https://github.com/your-username/real-recipes.git
+cd real-recipes
 
-## Join the community
 
-Join our community of developers creating universal apps.
+Install dependencies:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+npm install
+
+
+Create a .env file with your Edamam API keys:
+
+EDAMAM_APP_ID=your_app_id
+EDAMAM_APP_KEY=your_app_key
+
+
+Run the project:
+
+npx expo start
+
+
+Scan the QR code with the Expo Go app on your phone.
+
+Project Structure (simplified)
+app/
+ ├─ (tabs)/_layout.tsx   # Tab navigation
+ ├─ index.tsx            # Home screen (quote + recommended)
+ ├─ search.tsx           # Search screen
+ ├─ favourites.tsx       # Favourites
+ ├─ pantry.tsx           # Pantry
+ ├─ profile.tsx          # Profile
+components/
+ ├─ Header.tsx
+ ├─ RecipeCard.tsx
+services/
+ ├─ edamam.ts            # API functions
+
+Development Notes
+
+Built in an agile style, with small iterations
+
+Started from wireframes in Figma, tested with peers
+
+Updated styling several times (green + cream theme: #4CAF50 & #EFE6C9)
+
+Focused on usability: clear search bar, big recipe cards, simple navigation
+
+Student Reflection
+
+This project taught me how to:
+
+Manage a React Native app using Expo
+
+Work with an external API
+
+Apply design feedback to improve usability
+
+Balance technical work with project planning and documentation
